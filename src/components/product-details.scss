@@ -1,0 +1,40 @@
+@import "../sass/variables";
+
+.product-details {
+	$outer-radius: 0.5rem;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 1rem;
+	border: 1px solid $border-colour;
+	border-radius: $outer-radius;
+
+	&__name,
+	&__price {
+		margin-bottom: 1rem;
+	}
+}
+
+.price {
+	font-size: 1.5rem;
+}
+
+.button {
+	appearance: none;
+	display: block;
+	width: 100%;
+	padding: 0.8em;
+	border: 0;
+	color: white;
+	background-color: green;
+	cursor: pointer;
+
+	&:hover {
+		background-color: forestgreen;
+	}
+
+	&:active {
+		background-color: darkgreen;
+	}
+}

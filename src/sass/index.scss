@@ -1,0 +1,23 @@
+@import "reset.css";
+@import "normalize.css";
+@import "variables";
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    min-height: 100svh; /* this one should work better */
+}
+
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-weight: bold;
+}
