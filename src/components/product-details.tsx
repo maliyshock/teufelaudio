@@ -6,6 +6,12 @@ import { Pallete } from "./pallete.tsx";
 
 const IMG_PATH = DOMAIN.concat(IMG_FOLDER, PARAMETERS);
 
+const price = new Intl.NumberFormat("en-EU", {
+  style: "currency",
+  minimumFractionDigits: 2,
+  currency: "EUR",
+});
+
 export function ProductDetails({ variants }: ProductVariants) {
   const [active, setActive] = useState(0);
   const memoizedDetails = useMemo(() => variants && (Object.entries(variants) as [string, Product][]), [variants]);
@@ -13,11 +19,6 @@ export function ProductDetails({ variants }: ProductVariants) {
   const handleOnSelect = useCallback(index => {
     setActive(index);
   }, []);
-  const price = new Intl.NumberFormat("en-EU", {
-    style: "currency",
-    minimumFractionDigits: 2,
-    currency: "EUR",
-  });
 
   return (
     <div className="product-details">
